@@ -1,11 +1,9 @@
-version: '3'
-
 volumes:
   postgres_data:
     driver: local
 
 services:
-  postgres-knack:
+  postgres-nutrio:
     container_name: postgres-nutrio
     image: postgres:latest
     volumes:
@@ -19,7 +17,7 @@ services:
       POSTGRES_PASSWORD: postgres_password
       POSTGRES_PORT: 5432
 
-  pgadmin-knack:
+  pgadmin-nutrio:
     image: dpage/pgadmin4
     container_name: pgadmin-nutrio
     ports:
@@ -31,7 +29,7 @@ services:
     depends_on:
       - postgres-nutrio
 
-  mongo-knack:
+  mongo-nutrio:
     image: mongo
     container_name: mongo-nutrio
     ports:
@@ -41,7 +39,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: mongo_username
       MONGO_INITDB_ROOT_PASSWORD: mongo_password
 
-  mongo-express-knack:
+  mongo-express-nutrio:
     image: mongo-express
     container_name: mongo-express-nutrio
     ports:
