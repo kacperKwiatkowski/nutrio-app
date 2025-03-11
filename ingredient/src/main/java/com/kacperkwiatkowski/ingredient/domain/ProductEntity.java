@@ -1,4 +1,4 @@
-package com.kacperkwiatkowski.ingredient.entity;
+package com.kacperkwiatkowski.ingredient.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -10,7 +10,7 @@ import java.util.UUID;
 @Entity
 @Setter
 @Getter
-public class Product {
+public class ProductEntity {
 
     @Id
     private UUID id;
