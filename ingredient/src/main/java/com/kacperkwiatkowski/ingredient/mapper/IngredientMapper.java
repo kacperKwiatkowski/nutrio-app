@@ -5,15 +5,12 @@ import com.kacperkwiatkowski.ingredient.dto.IngredientDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
-import java.util.UUID;
-
 @RequiredArgsConstructor
 @Component
 public class IngredientMapper {
 
     public IngredientEntity mapToEntity(IngredientDTO ingredientDTO) {
         return IngredientEntity.builder()
-                .id(UUID.randomUUID())
                 .name(ingredientDTO.getName())
                 .protein(ingredientDTO.getProtein())
                 .fat(ingredientDTO.getFat())

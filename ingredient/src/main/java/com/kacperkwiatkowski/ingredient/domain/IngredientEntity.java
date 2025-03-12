@@ -1,12 +1,14 @@
 package com.kacperkwiatkowski.ingredient.domain;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
 
 import java.util.UUID;
 
-@Entity(name = "Ingredient")
+@Entity(name = "ingredient")
 @Setter
 @Getter
 @Builder
@@ -15,6 +17,7 @@ import java.util.UUID;
 public class IngredientEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
     private String name;
     private String producer;
