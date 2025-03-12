@@ -14,6 +14,6 @@ public class IngredientService {
     private final IngredientMapper ingredientMapper;
 
     public void addProduct(IngredientDTO productToAdd) {
-        ingredientRepository.save(ingredientMapper.mapToEntity(productToAdd));
+        ingredientRepository.save(ingredientMapper.mapDTOToEntity(productToAdd));
     }
 }

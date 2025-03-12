@@ -30,3 +30,7 @@ spring:
 #    locations: classpath:db/migration,classpath:db/demo_database
   main:
     banner-mode: off
+
+server:
+  servlet:
+    context-path: "/ingredient-service"

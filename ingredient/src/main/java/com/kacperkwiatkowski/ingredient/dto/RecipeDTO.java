@@ -1,8 +1,9 @@
 package com.kacperkwiatkowski.ingredient.dto;
 
-import jakarta.validation.constraints.NotEmpty;
 import lombok.*;
 import org.springframework.validation.annotation.Validated;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -10,11 +11,10 @@ import org.springframework.validation.annotation.Validated;
 @AllArgsConstructor
 @Validated
 @Builder
-public class IngredientDTO {
-    @NotEmpty
+public class RecipeDTO {
+
     private String name;
-    private int weight;
-    private int protein;
-    private int fat;
-    private int carbohydrates;
+    private String instructions;
+    private String comments;
+    private List<IngredientDTO> ingredients;
 }

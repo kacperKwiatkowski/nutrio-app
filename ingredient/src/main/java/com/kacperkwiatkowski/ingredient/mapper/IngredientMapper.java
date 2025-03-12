@@ -9,12 +9,21 @@ import org.springframework.stereotype.Component;
 @Component
 public class IngredientMapper {
 
-    public IngredientEntity mapToEntity(IngredientDTO ingredientDTO) {
+    public IngredientEntity mapDTOToEntity(IngredientDTO ingredientDTO) {
         return IngredientEntity.builder()
                 .name(ingredientDTO.getName())
                 .protein(ingredientDTO.getProtein())
                 .fat(ingredientDTO.getFat())
                 .carbohydrates(ingredientDTO.getCarbohydrates())
+                .build();
+    }
+
+    public IngredientDTO mapEntityToDTO(IngredientEntity ingredientEntity) {
+        return IngredientDTO.builder()
+                .name(ingredientEntity.getName())
+                .protein(ingredientEntity.getProtein())
+                .fat(ingredientEntity.getFat())
+                .carbohydrates(ingredientEntity.getCarbohydrates())
                 .build();
     }
 }
