@@ -15,7 +15,6 @@ public class IngredientMapper {
         return IngredientEntity.builder()
                 .id(UUID.randomUUID())
                 .name(ingredientDTO.getName())
-                .weight(ingredientDTO.getWeight())
                 .protein(ingredientDTO.getProtein())
                 .fat(ingredientDTO.getFat())
                 .carbohydrates(ingredientDTO.getCarbohydrates())
